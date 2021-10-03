@@ -29,9 +29,9 @@ class Details extends Component {
       this.state;
 
     return (
-      <div className="details">
+      <div className="container my-0 mx-auto text-center">
         <Carousal images={images} />
-        <div>
+        <div className="flex flex-col text-center p-5 w-6/12 justify-center align-middle">
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
           <ThemeContext.Consumer>

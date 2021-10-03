@@ -20,9 +20,9 @@ class Carousal extends Component {
     const { active } = this.state;
 
     return (
-      <div className="carousel">
+      <div className="flex gap-3 w-11/12 content-center justify-center">
         <img src={images[active]} alt="animal" />
-        <div className="carousel-smaller">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {images.map((photo, index) => (
             // eslint-disable-next-line
             <img
@@ -30,7 +30,7 @@ class Carousal extends Component {
               src={photo}
               data-index={index}
               onClick={() => this.handleClick(index)}
-              className={index === active ? "active" : ""}
+              className={index === active ? "opacity-80 rounded-full" : "rounded-full"}
               alt="animal thumbnail"
             />
           ))}
